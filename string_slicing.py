@@ -42,3 +42,10 @@ print(Delete)
 
 #length of the list
 print(len(cities)) 
+
+#REVERSE THE list
+cities.reverse()
+print(cities)
+
+#______________________________________ EXCERISE_______________________________________#
+
