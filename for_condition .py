@@ -1,44 +1,61 @@
 #star
 
-for i in range(1,11):
-    print("*")
+# for i in range(1,11):
+#     print("*")
 
-# guessing game
+# # guessing game
 
-import random
+# import random
 
-num=random.randint(1,20)
-guess=int(input("guess the number is less than 20: "))
+# num=random.randint(1,20)
+# guess=int(input("guess the number is less than 20: "))
 
-while num!=guess:
-     if guess>num:
-      print("your guess number is higher")
-     else:
-      print("your guess number is lower")
-     guess=int (input("guess again: "))   
+# while num!=guess:
+#      if guess>num:
+#       print("your guess number is higher")
+#      else:
+#       print("your guess number is lower")
+#      guess=int (input("guess again: "))   
  
-print ("you won")   
+# print ("you won")   
  
- #list
+#  #list
 
-list_num=[]
-for i in range(1,11):
-    list_num.append(int(i))
-print(list_num)
-for j in list_num:
-    if j%2==0:
-        print("this number are even: "+str(j))
-    else:
-        print("this number is odd: "+str(j))
+# list_num=[]
+# for i in range(1,11):
+#     list_num.append(int(i))
+# print(list_num)
+# for j in list_num:
+#     if j%2==0:
+#         print("this number are even: "+str(j))
+#     else:
+#         print("this number is odd: "+str(j))
+
+#number pattern
+
+# for i in range(1,6):
+#     for j in range(1,5):
+#         print(1,end="")
+#     print("")    
 
 #pattern 
 n=1
 for i in range(1,5):
     for j in range(0,n):
         print("*",end="") 
-        n+=1
+    n+=1
     print("")    
     
+# #pyramid
+# n=1
+# for i in range(1,6):
+#     for j in range(0,n):
+#          print("*",end="") 
+#     n=n+1
+#     print("")        
+        
+    
+ 
     
 
    
