@@ -9,14 +9,14 @@
 
 # num=random.randint(1,20)
 # guess=int(input("guess the number is less than 20: "))
-
+ 
 # while num!=guess:
 #      if guess>num:
-#       print("your guess number is higher")
+#           print("your guess number is higher")
 #      else:
-#       print("your guess number is lower")
-#      guess=int (input("guess again: "))   
- 
+#           print("your guess number is lower")
+#           guess=int (input("guess again: "))  
+               
 # print ("you won")   
  
 #  #list
@@ -39,21 +39,12 @@
 #     print("")    
 
 #pattern 
-n=1
-for i in range(1,5):
-    for j in range(0,n):
-        print("*",end="") 
-    n+=1
-    print("")    
-    
-# #pyramid
 # n=1
-# for i in range(1,6):
+# for i in range(1,5):
 #     for j in range(0,n):
-#          print("*",end="") 
-#     n=n+1
-#     print("")        
-        
+#         print("*",end="") 
+#     n+=1
+#     print("")    
     
  
     

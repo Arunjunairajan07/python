@@ -1,12 +1,12 @@
  # password 
 
-password="arunjunai"
-email=input("enter the email")
-security=input("Enter the password: ")
-if password == security:
-    print("you password is correct")
-else:
-    print("your password is incorrect")
+# password="arunjunai"
+# email=input("enter the email")
+# security=input("Enter the password: ")
+# if password == security:
+#     print("you password is correct")
+# else:
+#     print("your password is incorrect")
 
 
 #elif
@@ -24,13 +24,13 @@ elif number==0:
 # arjunai123 -> true
 # arjunai 124 -> false
 
-password=input("Enter the password: ")
-if password.isalpha():
-    print("please enter some numbers")
-elif password.isdigit():
-    print("please enter some alphas")
-else:
-    print("Correct")
+# password=input("Enter the password: ")
+# if password.isalpha():
+#     print("please enter some numbers")
+# elif password.isdigit():
+#     print("please enter some alphas")
+# else:
+#     print("Correct")
 
 # if password.isalnum():
 #     print("Correct")

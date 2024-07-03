@@ -3,8 +3,8 @@
 Name="Anand"
 Days= 15
 Years= 2021
-print("Dear" + str( Name))
-print("you have" + str (Days) + "days of leave balance for this year" + str (Years))
+print("Dear" +" "+ str( Name))
+print("you have" +" "+ str (Days) + "days of leave balance for this year" + str (Years))
 
 # get the user details
 
@@ -23,3 +23,10 @@ n=0
 print(math.log2(num))
 print(math.cos(n))
 print(math.e)
+
+#addition program
+
+arun= int(input("enter the A values :"))
+bala= int(input("enter the B values :"))
+Adds= int(arun) + int(bala)
+print("the answer is" + str(Adds))
