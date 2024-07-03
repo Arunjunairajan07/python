@@ -10,14 +10,14 @@
 
 
 #elif
+# number=int(input("Enthe number value: "))
+# if number>0:
+#     print("this number is positive")
+# elif number<0:
+#     print("this number is negative")
+# elif number==0:
+#     print("this number is zero")
 
-number=int(input("enter the number"))
-if number>0:
-    print("this number is positive")
-elif number<0:
-    print("this number is negative")
-elif number==0:
-    print("this number is zero")
 
 
 # arjunai -> false
@@ -36,3 +36,13 @@ elif number==0:
 #     print("Correct")
 # else:
 #     print("Wrong")
+
+#modules
+
+def num(number):
+    if number>0:
+        print("this number is positive")
+    elif number<0:
+        print("this number is negative")
+    elif number==0:
+        print("this number is zero")
