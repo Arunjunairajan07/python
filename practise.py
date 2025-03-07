@@ -1,7 +1,7 @@
-#10 star
+10 star
 
-# for i in range(1,11):
-#     print("*")
+for i in range(1,11):
+    print("*")
 
 # # guessing game
 
