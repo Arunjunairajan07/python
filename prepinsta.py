@@ -54,7 +54,7 @@ elif a<b and b<c:
 #         print("its not the prime number")
 #     else:
 #         print("its the prime number")
-# prime(11)
+# prime(33)
 
 #prime number with given range
 prime=[]
@@ -97,14 +97,14 @@ print(rev)
 print(5**2)
         
 #fibonacci series
-# n1=0
-# n2=1
-# num=int(input("Enter the number is: " ))
-# for i in range(1,num):
-#     n3=n1+n2
-#     n1=n2
-#     n2=n3
-#     print(n3,end=" ")
+n1=0
+n2=1
+num=int(input("Enter the number is: " ))
+for i in range(1,num):
+    n3=n1+n2
+    n1=n2
+    n2=n3
+    print(n3,end=" ")
     
 #factor
 # n=21
@@ -114,18 +114,18 @@ print(5**2)
          
 #armstrong number
 #Explanation : 371 can also be represented as 3^3 + 7^3 + 1^3 therefore it's an Armstrong Number.
-number=371
-num=number
-digit,sum=0,0
-length=len (str(number))
-for i in range(length):
-    digit=int(num%10)
-    num=num/10
-    sum=sum+digit**length
-if sum==number:
-    print("armstrong number")
-else:
-    print("Not a armstrong number")
+# number=371
+# num=number
+# digit,sum=0,0
+# length=len (str(number))
+# for i in range(length):
+#     digit=int(num%10)
+#     num=num/10
+#     sum=sum+digit**length
+# if sum==number:
+#     print("armstrong number")
+# else:
+#     print("Not a armstrong number")
         
 #perfect number
 #Input : 28
@@ -220,4 +220,38 @@ if sum>num:
 else:
     print("its not Abundant number")
 
-    
+# #largest element in the list
+# a=[23,56,78,45,98]
+# mac=a[0]
+# for i in a:
+#     if mac < i:
+#         mac=i
+# print(mac)    
+
+#smallest element in the list
+# a=[23,56,78,45,98]
+# mac=a[0]
+# for i in a:
+#     if mac > i:
+#         mac=i
+# print("its the smallest number in the list: ",mac) 
+
+#calculate the sum of the list
+a=[1,2,3,4,5]
+sum=0
+for i in a:
+    sum=sum+i
+print(sum)
+
+#find the smallest and largest number element in the list
+a=[23,56,78,45,98]
+mac=a[0]
+mac1=a[0]
+for i in a:
+    if mac > i:
+        mac=i
+    if mac1 < i:
+        mac1=i
+print("its the smallest number: ",mac)
+print("its the largest number: ",mac1)
+

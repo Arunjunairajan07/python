@@ -55,13 +55,13 @@
 # print(reverse[x])
 
 #dictinoary
-# data=[]
-# per_details={'name':'arun','age':21,'DOB':4/4/2003}
-# data.append(per_details)
-# print(data)
-# edu_details={'school':'guru','high school':'grace','clg':'sit'}
-# data.append(edu_details)
-# print(data[1]['clg'])
+data=[]
+per_details={'name':'arun','age':21,'DOB':4/4/2003}
+data.append(per_details)
+print(data)
+edu_details={'school':'guru','high school':'grace','clg':'sit'}
+data.append(edu_details)
+print(data[1]['clg'])
 
 # for key,value in per_details.items():
 #     print("key",key)
@@ -158,15 +158,15 @@ print(c)
 
 # #local and global variable 
 
-# a=10        #global variable
-# b=30        #global variable
-# def add():
-#     c=a+b
-#     return c
-# res=add()
-# print(res)
-# c=b-a
-# print("the answer is",c)   
+a=10        #global variable
+b=30        #global variable
+def add():
+    c=a+b
+    return c
+res=add()
+print(res)
+c=b-a
+print("the answer is",c)   
 
 # area of circle
 # def circle(i):
@@ -234,5 +234,128 @@ with open("if_condition.py") as file:
 
 #modules
 
-import if_condition as m
-print(m.num(5))
+# import if_condition as m
+# print(m.num(5))
+
+#high order function
+def happy():
+    print("jumping")
+happy()
+veryhappy = happy
+veryhappy()
+
+def feeling(func):
+    func()
+    print("sad")
+feeling(happy)
+
+#lambda
+rectangle = lambda l,b: l*b
+print(rectangle(2,3))
+
+age = lambda a : "your 5std " if a<10  else "your 10std"
+print(age(15))
+
+#sorted with key
+# item = [(1,"arun",90),(5,"vasanth",25),(3,"mahesh",50)]
+# item.sort()
+# print(item)
+# item.sort(key=lambda item:item[2])
+# print(item)
+
+item = ((1,"arun",90),(5,"vasanth",25),(3,"mahesh",50))
+a= list(item)
+print(a)
+a.sort(key=lambda item:item[2])
+print(a)
+# print(sorted(item))
+# print(sorted(item,key=lambda item:item[2]))
+
+#map
+item = [(1,"arun",90),(5,"vasanth",25),(3,"mahesh",50)]
+product = lambda item :(item[0],item[1],float("{:.2f}".format (item[2]/74)))
+shop = list(map(product,item))
+print(shop)
+
+#sqr with map
+val=[2,5,7,9,4]
+mul= lambda x: x*x
+sqr=list(map(mul,val))
+print(sqr)
+
+# even or odd in function
+num=[22,45,32,12]
+# def sqr (*a):
+#     if a%2==0:
+#         print("even")
+#     elif a%2!=0:
+#         print("odd")
+# sqr(num[22,45,32,12])
+sqr=lambda a: "even" if a%2==0 else "odd"
+c=list(map(sqr,num))
+print(c)
+    
+temp=[102,99,89,70,103]
+con=lambda a:float("{:.2f}".format((a-32)*5/9))
+b=list(map(con,temp))
+print(b)
+
+#fliter
+item = [(1,"arun",90),(5,"vasanth",25),(3,"mahesh",50)]
+fil=lambda item: item[2]<=50
+scan=list(filter(fil,item))
+print(scan)
+
+#Reduce
+import functools
+a=[32,45,67,89,2]
+b= lambda add,addd: add+addd
+c=functools.reduce(b,a)
+print(c)
+
+#list comperhension
+#[expn foe item in interable if condition]
+#[expn if-else for item in interable]
+temp=[102,99,89,70,103]
+celsius = [float("{:.2f}".format((i-32)*5/9))for i in temp]
+print(celsius)
+
+# Dictionary comprehension
+#{expn if-else for (key,val) in interable}
+a={"phone":16000,"Airpods":1000,"laptop":19000,"bike":80000,"camera":35000}
+b={key:val*.9 if val >10000 else val for (key,val) in a.items()}
+print(b)
+ 
+a={"phone":16000,"Airpods":1000,"laptop":19000,"bike":80000,"camera":35000}
+b={key:val*.9 for (key,val) in a.items()}
+print(b)
+
+#zip
+a=["redmi","realme","oppo","vivo","apple","oneplus"]
+b=[15000,16500,20000,18000,150000,25000]
+c=[20,8,5,3,1]
+d=list(zip(a,b,c))
+print(d)
+
+#Multithreading
+
+import threading
+import time
+def number(num):
+    for i in range(1,num+1):
+        a=i*i
+        print(a)
+        time.sleep(2)
+        
+print("hello")    
+def add(a,b):
+    c=a+b
+    print(c)
+    
+add(10,20)
+number(10)
+
+a=threading.thread(target=add)
+a.start()
+print(threading.action_count())
+

@@ -42,9 +42,10 @@ lenovo=laptop("19000","intel","12GB")
 # lenovo.processor="intel"
 # lenovo.ram="12GB"
 
-
 print(Hp.hp1())
-#print(lenovo.lenovo1())
+print(Dell.hp1())
+print(Hp.lenovo1())
+# print(lenovo.lenovo1())
 # print(Dell.dell1())
 
 class student():
@@ -55,8 +56,8 @@ class student():
         print("student name: ",self.name)
         print("student regno: ",self.regno)
     def display1(self):  
-        print("student name: ",self.name)
-        print("student regno: ",self.regno)  
+        print("student name: ",s2.name)
+        print("student regno: ",s2.regno)  
         
 s1=student()
 s2=student()
@@ -90,10 +91,12 @@ sub=calculator(10,5)
 mul=calculator(5,5)
 div=calculator(30,5)
 
-print(add.add1())
-print(sub.sub1())
-print(mul.mul1())
-print(div.div1())
+print(add.sub1())
+print(mul.add1())
+print(div.add1())
+# print(sub.sub1())
+# print(mul.mul1())
+# print(div.div1())
 
 # The five types of inheritance in Python 
 # single
@@ -120,9 +123,9 @@ class sem5(sem3,sem1):
         print("The networking subject")
         
 stu=sem5()
-#print(stu1.year2())
+print(stu.year2())
 print(stu.year3()) 
-# # print(stu.year2())   
+# print(stu.year2())   
 #print(stu.year1()) 
 
 # single inheritances
@@ -131,11 +134,11 @@ print(stu.year3())
 # one dervied class
 
 class selvam():
-    def bank(self):
+    def bank(self,a):
         print("The bank balances is 45000")
         
 class Arun(selvam):
-    def clgfees(self):
+    def clgfees(self,a):
         print("The clg fees is 45000")
         
 acc=Arun()
@@ -145,7 +148,7 @@ print(acc.clgfees())
 #MULTILEVEL INHERITANCES
 
 #one base class
-#two dervied class
+#two or more dervied class
 
 class webseries():
     def Theboys(self):
@@ -159,7 +162,7 @@ class Serial(cinema):
     def sarmen(self):
         print("The saravana meenaskshi serial")
         
-class youtuber(Serial,cinema):
+class youtuber(Serial):
     def vjsiddhu(self):
         print("The housetower series")        
 
@@ -167,14 +170,16 @@ Tv=youtuber()
 movies=cinema()
 # print(Tv.vjsiddhu())
 # print(Tv.sarmen())
-# print(movies.Goat())
+print(movies.Theboys())
 print(Tv.Goat())
 print(Tv.Theboys())
+print(Tv.sarmen())
+
 
 #hierarchy inheritance
 
 # one base class
-# two or more dervied class
+# two dervied class
 
 class mobile():
     def anbu(self):
@@ -241,9 +246,9 @@ class manavan(pera,namm,student):
     def name(self):
         print("rajan")
         
-s1=student()
-s2=pera()
-s3=namm()
+# s1=student()
+# s2=pera()
+# s3=namm()
 s4=manavan()
 
 print(s4.name())
@@ -281,11 +286,13 @@ print(v1.sukui())
 print(v1.hero())
 
 #polymorphism
-#method overriding
+#method overloading
 
 class shape():
-    def area(self):
-        return 0
+    def area(self,a):
+        self.a=5
+        self.b=self.a*self.a
+        print("the answer is: ",self.b)
     
 class rectangle(shape):
     # def __init__(self,l,b):
@@ -308,12 +315,12 @@ class shop():
      def __init__(self):
          self.__dress="shirt"
      def birthday(self):
-         print(self.__dress)
+         print("shop :",self.__dress)
     
 s1=shop()
 print(s1.birthday())
 
-#protector-(protector is used in _)protector is that variable are used in derived class of in herit the that class
+#protector-(protector is used in _)protector is that variable are used in derived class of inherit the that class
 class car():
     def __init__(self):
         self._color="red"
