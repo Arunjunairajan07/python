@@ -1,5 +1,5 @@
  # password 
-
+ 
 # password="arunjunai"
 # email=input("enter the email")
 # security=input("Enter the password: ")
@@ -46,7 +46,7 @@ def num(number):
         print("this number is negative")
     elif number==0:
         print("this number is zero")
-
+print(num(5))
 #palindrome
 
 # a = input("Enter the value: ")
@@ -66,19 +66,19 @@ def num(number):
     
 #swap two number
 
-a = input("Enter the value A: ")
-b = input("Enter the value B: ")
-c=a
-a=b
-b=c
-print("swap the number a: ",a)
-print("swap the number b: ",b)
+# a = input("Enter the value A: ")
+# b = input("Enter the value B: ")
+# c=a
+# a=b
+# b=c
+# print("swap the number a: ",a)
+# print("swap the number b: ",b)
 
 #vowels,consensts,digits
 
 # str="india is my country in 2024"
 # vowels=["a","e","i","o","u"]
-# num=["0","1","2","3","4","5","6","7","8","9"]
+# num=[0,1,2,3,4,5,6,7,8,9]
 # count=0
 # con=0
 # for i in str:
@@ -86,6 +86,9 @@ print("swap the number b: ",b)
 #         if i==j:
 #             count=count+1
 # print("vowels is: ",count)  
+# n=len(str)
+# d=n-count
+# print("constents is: ",d)
 
 #normal pattern
 
@@ -96,12 +99,12 @@ print("swap the number b: ",b)
     
 # patter1
 
-# n=0
-# for i in range(0,6):
-#     for j in range(0,n):
-#         print("*",end=" ")
-#     print(" ")
-#     n=n+1
+n=0
+for i in range(0,6):
+    for j in range(0,n):
+        print("*",end=" ")
+    print(" ")
+    n=n+1
 
 # # patter2
 
@@ -112,7 +115,7 @@ print("swap the number b: ",b)
 #     print(" ")
 #     n=n-1
     
-# #max and min
+#max and min
 # num=["5","6","7","2","9"]
 # num.sort()
 # val=int(input("Enter the mini=0 or Max=1 values: "))
@@ -122,6 +125,19 @@ print("swap the number b: ",b)
 #     print(num[4])
 # else:
 #     print("not founder")
+
+#swap three number
+
+a = input("Enter the value A: ")
+b = input("Enter the value B: ")
+c = input("Enter the value C: ")
+d=c
+c=b
+b=a
+a=d
+print("swap the number a: ",a)
+print("swap the number b: ",b)
+print("swap the number c: ",c)
    
 
             
