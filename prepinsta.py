@@ -42,19 +42,19 @@ elif a<b and b<c:
 #     print("this is not a leap year")
     
 #prime number
-# def prime(n):
-#     flag=0
-#     for i in range(2,n):
-#         if n<2:
-#             flag=1
-#         elif n%i==0:
-#             flag=1
-#             break
-#     if flag==1:
-#         print("its not the prime number")
-#     else:
-#         print("its the prime number")
-# prime(33)
+def prime(n):
+    flag=0
+    for i in range(2,n):
+        if n<2:
+            flag=1
+        elif n%i==0:
+            flag=1
+            break
+    if flag==1:
+        print("its not the prime number")
+    else:
+        print("its the prime number")
+prime(9)
 
 #prime number with given range
 prime=[]
@@ -87,11 +87,11 @@ print(rev)
 #     print("its not the palindrom")
     
 #factorial number
-# fac=int(input("Enter the factorial number is: "))
-# fact=1
-# for i in range(1,fac+1):
-#     fact=fact*i
-# print(fact)
+fac=int(input("Enter the factorial number is: "))
+fact=1
+for i in range(1,fac+1):
+    fact=fact*i
+print(fact)
 
 #power of number
 print(5**2)
@@ -104,7 +104,7 @@ for i in range(1,num):
     n3=n1+n2
     n1=n2
     n2=n3
-    print(n3,end=" ")
+print(n3,end=" ")
     
 #factor
 # n=21
@@ -114,37 +114,37 @@ for i in range(1,num):
          
 #armstrong number
 #Explanation : 371 can also be represented as 3^3 + 7^3 + 1^3 therefore it's an Armstrong Number.
-# number=371
-# num=number
-# digit,sum=0,0
-# length=len (str(number))
-# for i in range(length):
-#     digit=int(num%10)
-#     num=num/10
-#     sum=sum+digit**length
-# if sum==number:
-#     print("armstrong number")
-# else:
-#     print("Not a armstrong number")
+number=371
+num=number
+digit=sum=0
+length=len (str(number))
+for i in range(length):
+    digit=int(num%10)
+    num=num/10
+    sum=sum+digit**length
+if sum==number:
+    print("armstrong number")
+else:
+    print("Not a armstrong number")
         
 #perfect number
 #Input : 28
 # Divisors : [1, 2, 4, 7, 14]
 # Sum = 1 + 2 + 4 + 7 + 14 = 28
 # Output : It's a Perfect Number
-num=28
-n=0
-for i in range(1,num):
-    if num%i==0:
-        n=n+i    
-if n==num:
-    print("Its the prefect number")
-else:
-    print("its not the perfect number")
+# num=28
+# n=0
+# for i in range(1,num):
+#     if num%i==0:
+#         n=n+i    
+# if n==num:
+#     print("Its the prefect number")
+# else:
+#     print("its not the perfect number")
     
 #perfect square
 import math
-num=4
+num=7
 n=math.sqrt(num)
 print(n)
 check=n*n
@@ -173,8 +173,8 @@ print(n1)
 print(n1%n2)
 
 #harshad number 
-#The sum of the digits of 21 is 3 i.e 2 + 1. As the number 21 is divisible by 3, It's a Harshad Number.
-number=21
+#The sum of the digits of 21 is 3 i.e 2 + 1. As the number 21 is divisible by 3 is equal to 0, It's a Harshad Number.
+number=132
 num=number
 dig=num%10
 num=num//10
@@ -255,3 +255,31 @@ for i in a:
 print("its the smallest number: ",mac)
 print("its the largest number: ",mac1)
 
+# Anagram
+num1=[]
+num2=[]
+s1="listen"
+s2="silant"
+if len(s1)!=len(s2):
+    print("its not anagram")
+else:
+    for i in s1:
+        num1.append(i)
+    for j in s2:
+        num2.append(j)
+    for co in num1:
+        n=0
+        m=0
+        for x in num1:
+            if x==co:
+                n=n+1
+        for y in num2:
+            if y==co:
+                m=m+1
+        if n != m:
+            is_anagram = False
+                   
+if is_anagram:
+    print("true")
+else:
+    print("false")

@@ -20,7 +20,7 @@
  
 # cities=["coimbatore","madurai","trichy","chennai","salem"]
 
-# #acessing the list
+# # #acessing the list
 # print(cities[::3])
 
 # #modified the list (Exchange the values)
@@ -203,7 +203,7 @@ print("the answer is",c)
 
 import random
 
-num=random.randint(1000,2000)
+num=random.randint(1000,2000)+1
 def otp(verified):
     print("enter the your otp",verified)
 otp(num)
@@ -244,10 +244,14 @@ happy()
 veryhappy = happy
 veryhappy()
 
+def angry():
+    print("anonyms")
+angry()
+
 def feeling(func):
     func()
     print("sad")
-feeling(happy)
+feeling(angry)
 
 #lambda
 rectangle = lambda l,b: l*b
@@ -277,6 +281,7 @@ product = lambda item :(item[0],item[1],float("{:.2f}".format (item[2]/74)))
 shop = list(map(product,item))
 print(shop)
 
+
 #sqr with map
 val=[2,5,7,9,4]
 mul= lambda x: x*x
@@ -302,9 +307,14 @@ print(b)
 
 #fliter
 item = [(1,"arun",90),(5,"vasanth",25),(3,"mahesh",50)]
-fil=lambda item: item[2]<=50
+fil=lambda item: (item[2]<=50)
 scan=list(filter(fil,item))
 print(scan)
+
+num=[34,56,90,67,21,56,90]
+a=lambda num : num<=70
+b=list(filter(a,num))
+print(b)
 
 #Reduce
 import functools
@@ -313,12 +323,22 @@ b= lambda add,addd: add+addd
 c=functools.reduce(b,a)
 print(c)
 
+#Map
+temp=[102,99,89,70,103]
+a=lambda x : float("{:.2f}".format((x-32)*5/9))
+b= list(map(a,temp))
+print(b)
+
 #list comperhension
 #[expn foe item in interable if condition]
 #[expn if-else for item in interable]
 temp=[102,99,89,70,103]
 celsius = [float("{:.2f}".format((i-32)*5/9))for i in temp]
 print(celsius)
+
+num=[2,4,8,12,34,56]
+number=[i if i<=10 else 10 for i in num]
+print(number)
 
 # Dictionary comprehension
 #{expn if-else for (key,val) in interable}
@@ -339,23 +359,58 @@ print(d)
 
 #Multithreading
 
-import threading
-import time
-def number(num):
-    for i in range(1,num+1):
-        a=i*i
-        print(a)
-        time.sleep(2)
+# import threading
+# import time
+# def number(num):
+#     for i in range(1,num+1):
+#         a=i*i
+#         print(a)
+#         time.sleep(2)
         
-print("hello")    
-def add(a,b):
-    c=a+b
-    print(c)
+# print("hello")    
+# def add(a,b):
+#     c=a+b
+#     print(c)
     
-add(10,20)
-number(10)
+# add(10,20)
+# number(10)
 
-a=threading.thread(target=add)
-a.start()
-print(threading.action_count())
+# a=threading.thread(target=add)
+# a.start()
+# print(threading.action_count())
 
+def even(n):
+    for i in n:
+        if i%2==0:
+            print(i)
+        else:
+            print("false")
+         
+a=[1,2,3,4,5,6]   
+print(even(a))
+
+def args(*cuboid):
+    for i in cuboid:
+        volume=i*i*i
+        print(volume)
+print(args(4,5,6))
+
+num =112
+num1 = num%10
+print(num1)
+n= num//10
+print(n)
+
+n=123
+m=0
+while n>0:
+    num = n%10
+    n = n//10
+    m+=1
+    # m+= num
+print(m)
+for i in range(m):
+    print(i)
+
+    
+    

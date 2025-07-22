@@ -1,3 +1,8 @@
+#constructor
+
+#constructor is a special method in a class that automatically gets called when an object is created.
+# An instance variable is a unique variable for each object. Once it is created, it can be used in many methods within the same class."
+
 class laptop:
     
     # price=0       class variable
@@ -43,7 +48,7 @@ lenovo=laptop("19000","intel","12GB")
 # lenovo.ram="12GB"
 
 print(Hp.hp1())
-print(Dell.hp1())
+print(Dell.dell1())
 print(Hp.lenovo1())
 # print(lenovo.lenovo1())
 # print(Dell.dell1())
@@ -61,6 +66,7 @@ class student():
         
 s1=student()
 s2=student()
+#s2= student("sham","5005")
 s2.name="sham"
 s2.regno="5005"
 
@@ -134,11 +140,11 @@ print(stu.year3())
 # one dervied class
 
 class selvam():
-    def bank(self,a):
+    def bank(self):
         print("The bank balances is 45000")
         
 class Arun(selvam):
-    def clgfees(self,a):
+    def clgfees(self):
         print("The clg fees is 45000")
         
 acc=Arun()
@@ -148,7 +154,9 @@ print(acc.clgfees())
 #MULTILEVEL INHERITANCES
 
 #one base class
-#two or more dervied class
+#one dervied class
+# Base class → Derived class → Another derived class.
+# its the chain format inheritances .
 
 class webseries():
     def Theboys(self):
@@ -171,7 +179,9 @@ movies=cinema()
 # print(Tv.vjsiddhu())
 # print(Tv.sarmen())
 print(movies.Theboys())
+print(Tv.Theboys())
 print(Tv.Goat())
+print(movies.Goat())
 print(Tv.Theboys())
 print(Tv.sarmen())
 
@@ -179,7 +189,7 @@ print(Tv.sarmen())
 #hierarchy inheritance
 
 # one base class
-# two dervied class
+# more dervied class
 
 class mobile():
     def anbu(self):
@@ -197,10 +207,11 @@ class facebook(mobile):
     def rajan(self):
         print("8938095487")
         
+app=insta()
 ph=facebook()
-
-print(ph.rajan())
+# print(insta.arun())
 print(ph.anbu())
+
 
 # hybird inheritance
 # hybird inheritance is single,multiple,multilevel,hieriarchy inheritance are known is hybird inheritance 
@@ -256,7 +267,7 @@ print(s4.rollno())
 print(s4.reg())
 
 #super keyword
-
+#Once a constructor is created in the parent class, it can be used in the child class using the super keyword."
 class car():
     def __init__(self,color,num):
         self.color=color
@@ -266,59 +277,72 @@ class car():
         print("car",self.color)
         
 class bike(car):
-    def __init__(self,color,num):
+    def __init__(self,color,num,model):
         super().__init__(num,color)
+        self.model =model
     def duke(self):
         print("bike",self.num)
         print("bike",self.color)
+        print("bike",self.model)
         
 class auto(bike):
-    def __init__(self,num,color):
-        super().__init__(num,color)
+    def __init__(self,num,color,model):
+        super().__init__(num,color,model)
     def hero(self):
         print("auto",self.num)
         print("auto",self.color)
+        print("auto",self.model)
         
-v1=auto("7845","red")
+v1=auto("7845","red","v4")
 
 print(v1.duke())
 print(v1.sukui())
 print(v1.hero())
 
 #polymorphism
+#"Poly" = many,"Morphism" = forms.one operator behaving different performs is polymorphism
 #method overloading
 
-class shape():
-    def area(self,a):
-        self.a=5
-        self.b=self.a*self.a
-        print("the answer is: ",self.b)
+# class shape():
+#     def area(self,a):
+#         self.a=a
+#         self.b=self.a*self.a
+#         print("the answer is: ",self.b)
     
-class rectangle(shape):
-    # def __init__(self,l,b):
-    #     self.l=l
-    #     self.b=b  
-    def area(self,l,b):
-        self.l=l
-        self.b=b
-        c=self.l*self.b
-        print("area of rectangle is: ",c)
-        
-
-rec=rectangle()
-print(rec.area(5,3))
+# class rectangle(shape):
+#     # def __init__(self,l,b):
+#     #     self.l=l
+#     #     self.b=b  
+#     def area(self,l,b):
+#         self.l=l
+#         self.b=b
+#         c=self.l*self.b
+#         print("area of rectangle is: ",c)
+    
+# rec=rectangle()
+# print(rec.area(5,3))
+# print(rec.area(5))
 
 #Encapsulation
-
+#Encapsulation is the concept of bundling the data (variables) and the methods (functions) that operate on that data into a single unit 
 #private -(private is used in __) don't call directly in dress varriable,only function used call the dress variable
 class shop():
-     def __init__(self):
-         self.__dress="shirt"
-     def birthday(self):
-         print("shop :",self.__dress)
-    
-s1=shop()
-print(s1.birthday())
+    def __init__(self):
+        self.__dress="shirt"
+    def birthday(self):
+        print("shop :",self.__dress)
+        
+class pant(shop):
+    def __init__(self):
+        super().__init__()
+    def dress(self):
+        print("pant",self.__dress) 
+    def private_acess(self):
+        self.birthday()   
+  
+s1=pant()
+print(s1.dress())
+#print(s1.private_acess())
 
 #protector-(protector is used in _)protector is that variable are used in derived class of inherit the that class
 class car():
@@ -335,7 +359,98 @@ class bike(car):
     def duke(self):
         print("bike",self._num)
         print("bike",self._color)
+
         
 b1=bike()
 print(b1.duke())
 print(b1.sukui())
+
+#method Overloading
+# class Parent:
+#     def display(self,a=None,b=None):
+#         # if a is not None and b is not None:
+#         #     print(f"Parent: Two arguments: {a} and {b}")
+#         # elif a is not None:
+#         #     print(f"Parent: One argument: {a}")
+#         # else:
+#         #     print("Parent: No arguments")
+#         c=int(a*b)
+#         print(c)
+
+# class Child(Parent):
+#     def display(self,a=None,b=None,c=None):
+#         # if a is not None and b is not None and c is not None:
+#         #     print(f"Child: Three arguments: {a}, {b}, and {c}")
+#         # elif a is not None and b is not None:
+#         #     print(f"Child: Two arguments: {a} and {b}")
+#         # elif a is not None:
+#         #     print(f"Child: One argument: {a}")
+#         # else:
+#         #     print("Child: No arguments")
+#         d=int(a*b*c)
+#         print(d)
+        
+# c = Child()
+# print(c.display(5,3))
+# print(c.display(5,3,2))
+# # c = Child()
+# # c.display()
+# # c.display(10)
+# # c.display(10, 20)
+# # c.display(10, 20, 30)
+
+# method Overriding
+class Parent:
+    def show(self):
+        print("This is Parent class")
+
+class Child(Parent):
+    def show(self):
+        print("This is Child class")
+        super().show()  # Call the parent class method
+        
+
+c = Child()
+print(c.show())
+# Parent.show(c) # Only call the Parent's method
+
+#abstraction 
+from abc import ABC,abstractmethod
+
+class bike(ABC):
+    @abstractmethod
+    def start(self):
+        pass
+    
+    @abstractmethod
+    def gear(self):
+        pass
+    
+    @abstractmethod
+    def off (self):
+        pass
+    
+class splender(bike):
+    def start(self):
+        print("start the bike splender")
+        
+    def gear(self):
+        print("gear the bike splender")
+        
+    def off(self):
+        print("off the bike splender")
+        
+class xplus(bike):
+    def start(self):
+        print("start the bike xplus ")
+        
+    def gear(self):
+        print("gear the bike xplus")
+        
+    def off(self):
+        print("off the bike xplus")
+        
+hero=splender()
+print(hero.off())
+         
+    

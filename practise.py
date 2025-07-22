@@ -3,7 +3,7 @@
 # for i in range(1,11):
 #     print("*")
 
-changes 
+#changes 
 
 # # guessing game
 
@@ -101,16 +101,16 @@ changes
 #      print(rev[i])
     
 # reverse word
-# list1=[]
-# a=" The Sky is blue"
-# b=a[::-1]
-# print(b)
-# c=b.split(" ") 
-# print(c)
-# for i in range (len(c)):
-#     d=c[i]
-#     e=d[::-1]
-#     print(e,end=" ")
+list1=[]
+a=" The Sky is blue"
+b=a[::-1]
+print(b)
+c=b.split(" ") 
+print(c)
+for i in range (len(c)):
+    d=c[i]
+    e=d[::-1]
+    print(e,end=" ")
    
 # 1 2 3 4 5
 # 2 3 4 5
@@ -570,9 +570,10 @@ list2=[]
 list1=[5,2,6,1,4,3,8,9,12,7]
 for i in list1:
     for j in range(0,len(list1)):
-        a=i+list1[j]
+        a=i+list1[j] 
         if a==7 :
-            print("[",i,",",list1[j],"]")
+            # print("[",i,",",list1[j],"]")
+            print(list((i,list1[j])))
             n+=1
         else:
             continue
@@ -588,20 +589,223 @@ print("possible in 7: ",n)
 #     # print(a,end="")
 # Binary_Converter(num)
 
-a=21
-b=11
-a=a+b
-b=a-b
-a=a-b
-print("a: ",a)
-print("b: ",b)
+# Inbulit method for decimal to Binary converter
+def number(num):
+    a=bin(num)[2:] # this is inbuilt method
+    print(a)
+number(8)
 
+# num=int(input("enter the number: "))
+# b=bin(num)[2:]
+# a=list(reversed(b))
+# c=" ".join(a)
+# if c==b:
+#     print("its true")
+# else:
+#     print("flase")
+# print(c)
+# print(a)
+# print(type(b))
 
-
+# num=int(input("enter the number: "))
+# b=bin(num)[2:]
+# a=b[::-1]
+# print(b)
+# print(a)
+# if b==a:
+#     print("its true")
+# else:
+#     print("its false")
     
+# Swap two number using without third characters
+# a=21
+# b=11
+# a=a+b
+# b=a-b
+# a=a-b
+# print("a: ",a)
+# print("b: ",b)
+
+# str="india is my country"
+# voewls=["a","i","e","o","u"]
+# count=0
+# b=len(str)
+# print(b)
+# for i in voewls:
+#     for j in range(0,len(str)):
+#         if str[j]==i:
+#           count=count+1
+# c=b-count
+# print(count,": no of vowels")
+# print(c,": no of contencenes")
+
+# text = "india is my country in 2025"
+# vowels = ["a", "e", "i", "o", "u"]
+# for ch in text:
+#     if ch.lower() in vowels:
+#         print(ch, ": is a vowel")
+#     elif ch.isalpha():
+#         print(ch, ": is a consonant")
+#     elif ch.isdigit():
+#         print(ch, ": is digit")
+
+# n=5    
+# m=1
+# for i in range(1,6):
+#     for j in range(0,n):
+#         print(" ",end=" ")
+#     for k in range(0,m):
+#         print("*",end=" ")
+#     print(" ")
+#     n=n-1
+#     m=m+1
+
+n=5
+m=1
+for i in range(1,6):
+    for j in range(0,n):
+        print(" ",end=" ")
+    for k in range(0,m):
+        print("*",end=" ")
+    print(" ")
+    n=n-1
+    m=m+2
+
+#            *   
+#          *   *   
+#        *   *   *   
+#      *   *   *   *   
+#    *   *   *   *   *   
+ 
+# n=5  
+# m=1
+# for i in range(1,6):
+#     for j in range(1,n):
+#         print(" ",end=" ")
+#     for k in range(0,m):
+#         print(" * ",end=" ")
+#     n=n-1
+#     m=m+1
+
+# #      * 
+# #     * * 
+# #    * * * 
+# #   * * * * 
+# #  * * * * * 
+# for i in range(1, 6 ):
+#     print(" " * (6 - i), end="")
+#     print("* " * i)
+  
+# #     * 
+# #    * * 
+# #   * * * 
+# #  * * * * 
+# # * * * * *   
+# rows = 5
+# for i in range(1, rows + 1):
+#     for j in range(rows - i):
+#         print(" ", end="")
+#     for k in range(i):
+#         print("*", end=" ")
+#     print()
+
+#      * 
+#     * * 
+#    * * * 
+#   * * * * 
+#  * * * * *
+# n=6
+# m=2
+# for i in range(1, 6):
+#     for j in range(1,n):
+#         print(" ", end="")
+#     for k in range(1,m):
+#         print("*", end=" ")
+#     print()
+#     n=n-1
+#     m=m+1         
         
-    
+# n=0
+# arr=[1,2,3,6,8,5]
+# for i in arr:
+#     if i != 5:
+#         n=n+1
+#     else:
+#         break
+# print("index value for 5:",n)
 
+# n=0
+# m=1
+# for i in range(0,5):
+#     a=n+m
+#     n=m
+#     m=a
+#     print(a)
+
+# arr = [4,5,2,3,1]
+# for i in range(0,len(arr)):
+#     print(i)
+
+#Ascending Order
+# arr= [7, 3, 1, 4, 9]
+# for i in range(0,len(arr)-1):
+#     for j in range (0,len(arr)-1):
+#         if arr[j]>arr[j+1]:
+#             temp = arr[j+1]
+#             arr[j+1]= arr[j]
+#             arr[j] =temp
+# print(arr)
+
+# Descending Order
+# arr1=[2, 5, 8, 1, 3]
+# swap =0
+# for i in range(0,len(arr)-1):
+#     for j in range (0,len(arr)-1):
+#         if arr1[j]<arr1[j+1]:
+#             temp = arr1[j+1]
+#             arr1[j+1]= arr1[j]
+#             arr1[j] =temp
+#             swap+=1
+# print(arr1)
+# print(swap)
+
+#Count the Swap value
+arr1=[4, 3, 2, 1]
+swap=0
+for i in range(0,len(arr1)-1):
+    for j in range (0,len(arr1)-1):
+        if arr1[j]>arr1[j+1]:
+            temp = arr1[j+1]
+            arr1[j+1]= arr1[j]
+            arr1[j] =temp
+            swap+=1
+print(arr1)
+print(swap)
+
+arr1=[9, 5, 2, 8, 3]
+swap=0
+for i in range(0,len(arr1)-1):
+    for j in range (0,len(arr1)-1):
+        if arr1[j]>arr1[j+1]:
+            temp = arr1[j+1]
+            arr1[j+1]= arr1[j]
+            arr1[j] =temp
+            swap+=1
+    if swap == 1:
+        n=len(arr1)
+print(arr1)
+print(arr1[n-1])
             
+def length(a,b=None):
+    # m=3
+    num = number(a,b)
+def number(e,f):
+    if e==f:
+        print("hi",e*f)
+print(length(3,3))
         
-    
+thistuple = ("apple", "banana", "cherry")
+a =list(thistuple)
+a.insert(1,"orange")
+c= tuple(a)
+print(c)
